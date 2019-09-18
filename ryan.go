@@ -21,7 +21,6 @@ func main() {
 	})
 
 	c.Draw(func(ctx *canvas.Context) {
-	ctx.Push()
 		if ctx.IsMouseDragged {
 			ctx.SetColor(colornames.Darkorange)
 			ctx.DrawCircle(ctx.Mouse.X, ctx.Mouse.Y, 50)
@@ -48,13 +47,10 @@ func main() {
 			ctx.DrawCircle(ctx.Mouse.X, ctx.Mouse.Y-7, 3)
 			ctx.Fill() // 코2
 		}
-		ctx.Pop()
 
 		if ctx.IsKeyPressed(pixelgl.KeySpace) { // 키보드 이벤트(지우기)
-			ctx.Push()
 			ctx.SetColor(colornames.White)
 			ctx.Clear()
-			ctx.Pop()
 		}
 	})
 }

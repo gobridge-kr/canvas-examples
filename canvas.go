@@ -23,7 +23,6 @@ func main() {
 	})
 
 	c.Draw(func(ctx *canvas.Context) {
-	ctx.Push()
 		if ctx.IsMouseDragged {
 			ctx.DrawLine(
 				ctx.Mouse.X,
@@ -33,14 +32,11 @@ func main() {
 			)
 			ctx.Stroke()
 		}
-		ctx.Pop()
 
 		if ctx.IsKeyPressed(pixelgl.KeySpace) {
-			ctx.Push()
 			ctx.SetColor(colornames.White)
 			ctx.Clear()
 			ctx.SetColor(colornames.Black)
-			ctx.Pop()
 		}
 	})
 }
