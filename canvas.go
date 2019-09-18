@@ -1,13 +1,14 @@
 package main
 
 import (
+	"github.com/faiface/pixel/pixelgl"
 	"github.com/h8gi/canvas"
 	"golang.org/x/image/colornames"
 )
 
 // 마우스로 선 그리기
 func main() {
-	c := canvas.New(&canvas.NewCanvasOptions{
+	c := canvas.NewCanvas(&canvas.CanvasConfig{
 		Width:     1200,
 		Height:    1200,
 		FrameRate: 60,
@@ -22,20 +23,24 @@ func main() {
 	})
 
 	c.Draw(func(ctx *canvas.Context) {
-		if ctx.MouseDragged() {
+	ctx.Push()
+		if ctx.IsMouseDragged {
 			ctx.DrawLine(
-				ctx.MouseX(),
-				ctx.MouseY(),
-				ctx.PreviousMouseX(),
-				ctx.PreviousMouseY(),
+				ctx.Mouse.X,
+				ctx.Mouse.Y,
+				ctx.PMouse.X,
+				ctx.PMouse.Y,
 			)
 			ctx.Stroke()
 		}
+		ctx.Pop()
 
-		if ctx.KeyPressed() {
+		if ctx.IsKeyPressed(pixelgl.KeySpace) {
+			ctx.Push()
 			ctx.SetColor(colornames.White)
 			ctx.Clear()
 			ctx.SetColor(colornames.Black)
+			ctx.Pop()
 		}
 	})
 }

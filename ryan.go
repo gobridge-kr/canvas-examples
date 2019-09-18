@@ -50,7 +50,7 @@ func main() {
 		}
 		ctx.Pop()
 
-		if ctx.IsKeyPressed(pixelgl.KeyUp) { // 키보드 이벤트(지우기)
+		if ctx.IsKeyPressed(pixelgl.KeySpace) { // 키보드 이벤트(지우기)
 			ctx.Push()
 			ctx.SetColor(colornames.White)
 			ctx.Clear()
