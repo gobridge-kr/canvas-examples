@@ -8,7 +8,7 @@ import (
 
 // 사람 그리기
 func main() {
-	c := canvas.New(&canvas.NewCanvasOptions{
+	c := canvas.NewCanvas(&canvas.CanvasConfig{
 		Width:     1200,
 		Height:    1200,
 		FrameRate: 60,
@@ -42,6 +42,5 @@ func main() {
 	})
 
 	c.Draw(func(ctx *canvas.Context) {
-
 	})
 }

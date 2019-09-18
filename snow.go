@@ -13,7 +13,7 @@ const n = 100
 
 // 눈 내리는 효과
 func main() {
-	c := canvas.New(&canvas.NewCanvasOptions{
+	c := canvas.NewCanvas(&canvas.CanvasConfig{
 		Width:     width,
 		Height:    height,
 		FrameRate: 60,
