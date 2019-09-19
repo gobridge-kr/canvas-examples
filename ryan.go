@@ -10,7 +10,7 @@ import (
 func main() {
 	c := canvas.NewCanvas(&canvas.CanvasConfig{
 		Width:     900,
-		Height:    700,
+		Height:    900,
 		FrameRate: 10,
 		Title:     "Ryan",
 	})

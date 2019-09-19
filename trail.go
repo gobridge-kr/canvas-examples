@@ -11,8 +11,8 @@ import (
 // 마우스 지나간 자국
 func main() {
 	c := canvas.NewCanvas(&canvas.CanvasConfig{
-		Width:     1200,
-		Height:    1200,
+		Width:     900,
+		Height:    900,
 		FrameRate: 60,
 		Title:     "Trail",
 	})

@@ -9,8 +9,8 @@ import (
 // WASD로 도형 이동
 func main() {
 	c := canvas.NewCanvas(&canvas.CanvasConfig{
-		Width:     1200,
-		Height:    1200,
+		Width:     900,
+		Height:    900,
 		FrameRate: 60,
 		Title:     "WASD",
 	})
@@ -22,7 +22,7 @@ func main() {
 	me := struct {
 		X float64
 		Y float64
-	}{600, 600}
+	}{450, 450}
 	c.Draw(func(ctx *canvas.Context) {
 		ctx.SetColor(colornames.White)
 		ctx.Clear()

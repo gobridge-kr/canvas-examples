@@ -9,8 +9,8 @@ import (
 // 마우스로 선 그리기
 func main() {
 	c := canvas.NewCanvas(&canvas.CanvasConfig{
-		Width:     1200,
-		Height:    1200,
+		Width:     900,
+		Height:    900,
 		FrameRate: 60,
 		Title:     "Canvas",
 	})
