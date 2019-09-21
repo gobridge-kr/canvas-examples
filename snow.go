@@ -7,13 +7,13 @@ import (
 	"golang.org/x/image/colornames"
 )
 
-const width = 1200
-const height = 1200
+const width = 900
+const height = 900
 const n = 100
 
 // 눈 내리는 효과
 func main() {
-	c := canvas.New(&canvas.NewCanvasOptions{
+	c := canvas.NewCanvas(&canvas.CanvasConfig{
 		Width:     width,
 		Height:    height,
 		FrameRate: 60,
@@ -22,7 +22,7 @@ func main() {
 
 	particles := [n]SnowParticle{}
 	c.Setup(func(ctx *canvas.Context) {
-		for i := 0; i < n; i += 1 {
+		for i := 0; i < n; i++ {
 			particles[i] = randomSnowParticle()
 		}
 	})
@@ -35,7 +35,7 @@ func main() {
 		for i, particle := range particles {
 			ctx.DrawCircle(particle.X, particle.Y, 10)
 			ctx.Fill()
-			newY := particle.Y + particle.Velocity
+			newY := particle.Y - particle.Velocity
 			if newY > height {
 				particles[i] = randomSnowParticle()
 				continue
@@ -53,7 +53,7 @@ func main() {
 func randomSnowParticle() SnowParticle {
 	return SnowParticle{
 		X:        rand.Float64() * width,
-		Y:        0,
+		Y:        900,
 		Velocity: rand.Float64() * height * 0.01,
 	}
 }

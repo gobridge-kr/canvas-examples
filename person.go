@@ -8,9 +8,9 @@ import (
 
 // 사람 그리기
 func main() {
-	c := canvas.New(&canvas.NewCanvasOptions{
-		Width:     1200,
-		Height:    1200,
+	c := canvas.NewCanvas(&canvas.CanvasConfig{
+		Width:     900,
+		Height:    900,
 		FrameRate: 60,
 		Title:     "Basic",
 	})
@@ -22,26 +22,25 @@ func main() {
 		ctx.SetColor(colornames.White)
 		ctx.SetLineWidth(5)
 
-		ctx.DrawArc(560, 300, 25, gg.Radians(-30), gg.Radians(-150)) // left eye
+		ctx.DrawArc(420, 675, 25, gg.Radians(30), gg.Radians(150)) // left eye
 		ctx.Stroke()
 
-		ctx.DrawArc(640, 300, 25, gg.Radians(-30), gg.Radians(-150)) // right eye
+		ctx.DrawArc(480, 675, 25, gg.Radians(30), gg.Radians(150)) // right eye
 		ctx.Stroke()
 
-		ctx.DrawArc(600, 325, 50, gg.Radians(30), gg.Radians(150)) // mouth
+		ctx.DrawArc(450, 665, 50, gg.Radians(-30), gg.Radians(-150)) // mouth
 		ctx.Stroke()
 
 		ctx.SetLineWidth(15)
-		ctx.DrawCircle(600, 300, 100)     // head
-		ctx.DrawLine(600, 400, 600, 700)  // body
-		ctx.DrawLine(600, 500, 400, 300)  // left arm
-		ctx.DrawLine(600, 500, 800, 300)  // right arm
-		ctx.DrawLine(600, 700, 500, 1000) // left leg
-		ctx.DrawLine(600, 700, 700, 1000) // right leg
+		ctx.DrawCircle(450, 675, 100)    // head
+		ctx.DrawLine(450, 570, 450, 375) // body
+		ctx.DrawLine(450, 475, 300, 650) // left arm
+		ctx.DrawLine(450, 475, 600, 650) // right arm
+		ctx.DrawLine(450, 375, 375, 150) // left leg
+		ctx.DrawLine(450, 375, 525, 150) // right leg
 		ctx.Stroke()
 	})
 
 	c.Draw(func(ctx *canvas.Context) {
-
 	})
 }

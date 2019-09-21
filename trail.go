@@ -10,9 +10,9 @@ import (
 
 // 마우스 지나간 자국
 func main() {
-	c := canvas.New(&canvas.NewCanvasOptions{
-		Width:     1200,
-		Height:    1200,
+	c := canvas.NewCanvas(&canvas.CanvasConfig{
+		Width:     900,
+		Height:    900,
 		FrameRate: 60,
 		Title:     "Trail",
 	})
@@ -23,7 +23,7 @@ func main() {
 	})
 
 	c.Draw(func(ctx *canvas.Context) {
-		if ctx.MouseX() == ctx.PreviousMouseX() && ctx.MouseY() == ctx.PreviousMouseY() {
+		if ctx.Mouse.X == ctx.PMouse.X && ctx.Mouse.Y == ctx.PMouse.Y {
 			return
 		}
 		ctx.SetColor(color.RGBA{
@@ -33,8 +33,8 @@ func main() {
 			A: 255,
 		})
 		ctx.DrawCircle(
-			ctx.PreviousMouseX(),
-			ctx.PreviousMouseY(),
+			ctx.PMouse.X,
+			ctx.PMouse.Y,
 			15,
 		)
 		ctx.Fill()
