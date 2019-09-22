@@ -27,9 +27,9 @@ https://sourceforge.net/projects/mingw-w64/
     (mingw64가 설치된 경롤 이동해서 bin 폴더까지 이동, 아래와 같은 경로를 추가합니다.
       C:\Program Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin)
 ```
-참고 캡처
-<img src="images/gcc.png" width="160"/>
-<img src="images/var.png" width="160"/>
+참고 캡처  
+<img src="images/gcc.png" width="500"/>
+<img src="images/var.png" width="500"/>
 
 ## 4. Install `canvas` package (https://github.com/h8gi/canvas)  
 `go get -u github.com/h8gi/canvas`
@@ -55,4 +55,6 @@ https://git-scm.com/downloads
 `go run ryan.go`
 
 ---
-<img src="images/ryan.png" width="160"/>
+
+# Example
+<img src="images/ryan.png" width="400"/>
