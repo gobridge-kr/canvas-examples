@@ -23,15 +23,18 @@ https://sourceforge.net/projects/mingw-w64/
 2. Architecture를 i686에서 x86_64로 변경 후 설치
 3. 설치 완료 후 환경변수 설정하기
   - 제어판 > 시스템 > 고급 시스템 설정 > 환경변수 설정 창 열기
-  - 사용자 변수, 시스템 변수에 있는 path 변수에 gcc가 설치된 경로 추가 
-    (mingw64가 설치된 경롤 이동해서 bin 폴더깢 이동, 아래와 같은 경로를 추가합니다.
+  - 사용자 변수, 시스템 변수에 있는 path 변수에 gcc가 설치된 경로 추가
+    (mingw64가 설치된 경롤 이동해서 bin 폴더까지 이동, 아래와 같은 경로를 추가합니다.
       C:\Program Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin)
 ```
+참고 캡처
+<img src="images/gcc.png" width="160"/>
+<img src="images/var.png" width="160"/>
 
 ## 4. Install `canvas` package (https://github.com/h8gi/canvas)  
 `go get -u github.com/h8gi/canvas`
 
-## 5. 실행
+## 5. 소스코드 다운로드 및 실행
 `go run ryan.go`
 
 ---
@@ -48,5 +51,8 @@ https://git-scm.com/downloads
 ## 3. Install `canvas` package (https://github.com/h8gi/canvas)  
 `go get -u github.com/h8gi/canvas`
 
-## 4. 실행
+## 4. 소스코드 다운로드 및 실행
 `go run ryan.go`
+
+---
+<img src="images/ryan.png" width="160"/>
