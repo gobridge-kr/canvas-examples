@@ -24,7 +24,7 @@ https://sourceforge.net/projects/mingw-w64/
 3. 설치 완료 후 환경변수 설정하기
   - 제어판 > 시스템 > 고급 시스템 설정 > 환경변수 설정 창 열기
   - 사용자 변수, 시스템 변수에 있는 path 변수에 gcc가 설치된 경로 추가
-    (mingw64가 설치된 경롤 이동해서 bin 폴더까지 이동, 아래와 같은 경로를 추가합니다.
+    (mingw64가 설치된 경로로 이동해서 bin 폴더까지 이동, 아래와 같은 경로를 추가합니다.
       C:\Program Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin)
 ```
 참고 캡처  
